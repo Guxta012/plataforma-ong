@@ -1,0 +1,101 @@
+/* ------------------------------
+   Paleta de cores - Ajuda para Aumigos
+------------------------------ */
+:root {
+  --cor-primaria: #8B4A32;
+  --cor-secundaria: #C77E63;
+  --cor-destaque: #D63F2A;
+  --cor-fundo: #FAF3E0;
+  --cor-fundo-claro: #FFF8F3;
+  --cor-texto: #3B2F2F;
+  --cor-texto-claro: #FFFFFF;
+  --cor-borda: #E0CDB8;
+
+  /* Tipografia e espaçamento */
+  --fonte-principal: "Poppins", Arial, sans-serif;
+  --espacamento: 16px;
+}
+
+/* ------------------------------
+   Estilos gerais
+------------------------------ */
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-principal);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--cor-texto-claro);
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--cor-destaque);
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--cor-fundo-claro);
+  border-radius: 10px;
+  border: 1px solid var(--cor-borda);
+}
+
+h2 {
+  color: var(--cor-primaria);
+  border-bottom: 2px solid var(--cor-secundaria);
+  padding-bottom: 5px;
+}
+
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+button, .btn {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--cor-secundaria);
+}
