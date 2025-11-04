@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Plataforma ONG — Cadastro</title>
-  <!-- link pro seu CSS (certifique-se de ter css/style.css) -->
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário de cadastro da Ajuda para Aumigos.">
+  <title>Cadastro - Ajuda para Aumigos</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/script.js"></script>
 </head>
 <body>
   <header>
-    <h1>Plataforma ONG</h1>
-    <nav>
+    <h1>Cadastro de Voluntário</h1>
+    <nav aria-label="Navegação principal">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
@@ -20,132 +21,26 @@
   </header>
 
   <main>
-    <section aria-labelledby="titulo-cadastro">
-      <h2 id="titulo-cadastro">Cadastro de Voluntário / Doador</h2>
+    <form id="formCadastro" aria-label="Formulário de Cadastro">
+      <fieldset>
+        <legend>Preencha suas informações</legend>
 
-      <!-- formulário com id usado pelo script.js -->
-      <form id="formCadastro" action="#" method="post" novalidate>
-        <fieldset>
-          <legend>Informações Pessoais</legend>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required aria-required="true">
 
-          <label for="nome">Nome Completo <span aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            required
-            aria-required="true"
-            placeholder="Ex: João da Silva"
-            minlength="3"
-          >
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
 
-          <label for="email">E-mail <span aria-hidden="true">*</span></label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            aria-required="true"
-            placeholder="exemplo@dominio.com"
-          >
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required aria-required="true" pattern="[0-9]{10,11}" title="Apenas números">
 
-          <label for="cpf">CPF <span aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="cpf"
-            name="cpf"
-            required
-            aria-required="true"
-            placeholder="000.000.000-00"
-            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-            title="Formato: 000.000.000-00"
-          >
-
-          <label for="telefone">Telefone <span aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="telefone"
-            name="telefone"
-            required
-            aria-required="true"
-            placeholder="(11) 99999-9999"
-            pattern="\(\d{2}\)\s\d{5}-\d{4}"
-            title="Formato: (XX) 9XXXX-XXXX"
-          >
-
-          <label for="nascimento">Data de Nascimento <span aria-hidden="true">*</span></label>
-          <input
-            type="date"
-            id="nascimento"
-            name="nascimento"
-            required
-            aria-required="true"
-            max="2025-12-31"
-          >
-        </fieldset>
-
-        <fieldset>
-          <legend>Endereço</legend>
-
-          <label for="endereco">Endereço <span aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="endereco"
-            name="endereco"
-            required
-            aria-required="true"
-            placeholder="Rua, número, complemento"
-          >
-
-          <label for="cep">CEP <span aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="cep"
-            name="cep"
-            required
-            aria-required="true"
-            placeholder="00000-000"
-            pattern="\d{5}-\d{3}"
-            title="Formato: 00000-000"
-          >
-
-          <label for="cidade">Cidade <span aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="cidade"
-            name="cidade"
-            required
-            aria-required="true"
-            placeholder="São Paulo"
-          >
-
-          <label for="estado">Estado (UF) <span aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="estado"
-            name="estado"
-            required
-            aria-required="true"
-            placeholder="SP"
-            maxlength="2"
-            pattern="[A-Za-z]{2}"
-            title="Informe a sigla do estado (ex: SP)"
-          >
-        </fieldset>
-
-        <!-- área para mensagens de erro (opcional: o script usa alert, mas deixei este container caso queira mostrar mensagens inline) -->
-        <div id="mensagens" role="status" aria-live="polite" style="margin:12px 0;color:#b00020;"></div>
-
-        <button type="submit" class="btn">Enviar Cadastro</button>
-      </form>
-    </section>
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
   </main>
 
   <footer>
-    <p>&copy; 2025 Plataforma ONG — Todos os direitos reservados.</p>
+    <p>&copy; 2025 Ajuda para Aumigos</p>
   </footer>
-
-  <!-- link pro JS (certifique-se de ter js/script.js) -->
-  <script src="js/script.js"></script>
 </body>
 </html>
